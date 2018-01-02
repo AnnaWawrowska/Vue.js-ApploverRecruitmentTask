@@ -1,0 +1,131 @@
+// ---------------------------------------------------
+// Bootsrap overrides
+// ---------------------------------------------------
+
+.btn {
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  letter-spacing: -0.4px;
+  font-family: 'Lato', sans-serif;
+  &-primary {
+    background-color: $color--green;
+    border-color: $color--green;
+
+    &:hover {
+      background-color: darken($color--green, 4);
+      border-color: darken($color--green, 4);
+    }
+  }
+  &-secondary {
+    background-color: $color--gray;
+    border-color: $color--gray;
+    color: $color--white;
+    &:hover {
+      background-color: darken($color--gray, 7);
+      border-color: darken($color--gray, 7);
+      color: $color--white;
+    }
+  }
+  &-small {
+    width: 49%;
+    margin-top: 10px;
+    @include media('<sm') {
+      width: 100%;
+    }
+  }
+  &-lg {
+    padding: 5px 30px;
+    margin: 15px 0;
+  }
+  &-block + .btn-block {
+    margin-top: 10px;
+  }
+}
+
+.modal {
+  &-dialog {
+    width: 450px;
+    @include media('<sm') {
+       width: auto;
+    }
+  }
+  &-content {
+    border-radius: 10px;
+  }
+  &-header {
+    background-color: $color--green;
+    justify-content: space-around;
+    text-transform: uppercase;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 13px;
+  }
+  &-title {
+    font-size: 16px;
+  }
+  &-body {
+    padding: 10px 49px;
+    @include media('<sm') {
+      padding: 10px 40px;
+    }
+  }
+  &-footer {
+    display: flex;
+    flex-direction: column;
+    padding: 0 75px 30px;
+    border: none;
+    &>:not(:last-child) {
+      margin-right: 0;
+    }
+    &>:not(:first-child) {
+      margin-left: 0;
+    }
+    @include media('<sm') {
+      padding: 0 40px 30px;
+    }
+  }
+  &-spacer {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 10px;
+      left: -20px;
+      width: 15px;
+      border-bottom: 1px solid $color--dark-gray;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 10px;
+      right: -20px;
+      width: 15px;
+      border-bottom: 1px solid $color--dark-gray;
+    }
+  }
+
+
+
+  .form {
+    &-group{
+      margin-bottom: 0px;
+      label {
+        font-size: 12px;
+        font-weight: 300;
+        color: $color--dark-gray;
+        margin-bottom: 3px;
+      }
+    }
+    &-control {
+      border-radius: 10px;
+      background-color: $color--gray-3;
+      border: none;
+      padding-bottom: 3px;
+      &:focus {
+        border: none;
+        box-shadow: 0 0 0 0.2rem rgba(109,159,3,0.25)
+      }
+    }
+  }
+}
