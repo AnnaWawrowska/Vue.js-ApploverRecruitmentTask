@@ -1,0 +1,81 @@
+<template lang="html">
+  <section class="section--search">
+    <div class="container">
+      <form action="/" method="get" class="search">
+        <input class="search__input" type="text" name="search" placeholder="Wpisz szukaną frazę np. informatyka, Warszawa, java">
+        <button class="btn btn-primary search__submit" type="submit">Szukaj</button>
+      </form>
+    </div>
+  </section>
+</template>
+
+<style lang="scss" scoped>
+@import '../styles/helpers/colors.scss';
+@import '../styles/helpers/include-media.scss';
+
+.search {
+  max-width: 620px;
+  margin: 0 auto;
+  display: flex;
+  box-shadow: 0 2px 30px 0 rgba(0,0,0,0.22);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  &:before {
+    content: url(../assets/svg/ico-search.svg);
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 7px;
+    left: 25px;
+    @include media('<sm') {
+      left: 10px;
+    }
+  }
+
+  &__input {
+    width: calc(100% - 150px);
+    border: 0;
+    font-size: 12px;
+    letter-spacing: -0.4px;
+    font-family: 'Lato', sans-serif;
+    padding: 0 20px 0 70px;
+    outline: none;
+    @include media('<sm') {
+      width: calc(100% - 65px);
+      padding: 0 5px 0 35px;
+    }
+  }
+  &__submit {
+    width: 150px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    @include media('<sm') {
+      width: 65px;
+    }
+  }
+}
+
+::-webkit-input-placeholder {
+  color: $color--gray;
+}
+:-moz-placeholder {
+  color: $color--gray;
+  opacity:  1;
+}
+::-moz-placeholder {
+  color: $color--gray;
+  opacity:  1;
+}
+:-ms-input-placeholder {
+  color: $color--gray;
+}
+::-ms-input-placeholder {
+  color: $color--gray;
+}
+
+::placeholder {
+  color: $color--gray;
+}
+</style>
