@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import Login from './Modals/Modal-login.vue';
-import SignUp from './Modals/Modal-signUp.vue';
-import ResetPassword from './Modals/Modal-resetPassword.vue';
+import Login from './Modals/Login.vue';
+import SignUp from './Modals/SignUp.vue';
+import ResetPassword from './Modals/ResetPassword.vue';
 
 
 export default {
